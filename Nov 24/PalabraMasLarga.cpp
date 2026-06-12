@@ -32,27 +32,28 @@ using vvll = vector<vll>;
 #define edl '\n'
 
 // Macros para iteraciones
-#define rep(i, a, b) for(int i = a; i < b; ++i)
-#define repr(i, a, b) for(int i = a; i >= b; --i)
-#define each(x, a) for(auto &x : a)
+#define rep(i, a, b) for (int i = a; i < b; ++i)
+#define repr(i, a, b) for (int i = a; i >= b; --i)
+#define each(x, a) for (auto &x : a)
 
 // Utility Functions
-template<class T>
+template <class T>
 bool chmax(T &A, T &&B) { return B > A ? A = B, true : false; }
 
-template<class T>
+template <class T>
 bool chmin(T &A, T &&B) { return B < A ? A = B, true : false; }
 
-template<typename T>
+template <typename T>
 T gcd(T a, T b) { return b ? gcd(b, a % b) : a; }
 
-template<typename T>
+template <typename T>
 T lcm(T a, T b) { return a / gcd(a, b) * b; }
 
-template<typename T>
+template <typename T>
 void debug_vector(vector<T> &v) {
     cerr << "[ ";
-    for (T &x: v) cerr << x << " ";
+    for (T &x : v)
+        cerr << x << " ";
     cerr << "]" << edl;
 }
 
@@ -65,18 +66,22 @@ constexpr array<int, 4> dx{1, 0, -1, 0};
 constexpr array<int, 4> dy{0, 1, 0, -1};
 
 // Funciones de entrada/salida
-template<typename T>
+template <typename T>
 void read(T &x) { cin >> x; }
 
-template<typename T>
-void read(vector<T> &v) { for (T &x: v) cin >> x; }
+template <typename T>
+void read(vector<T> &v) {
+    for (T &x : v)
+        cin >> x;
+}
 
-template<typename T>
+template <typename T>
 void write(const T &x) { cout << x << '\n'; }
 
-template<typename T>
+template <typename T>
 void write_vector(const vector<T> &v) {
-    for (const T &x: v) cout << x << ' ';
+    for (const T &x : v)
+        cout << x << ' ';
     cout << '\n';
 }
 
@@ -87,7 +92,7 @@ int32_t main() {
     string c;
     getline(cin, c);
     int contador = 0, maxi = 0;
-    for (auto i: c) {
+    for (auto i : c) {
         if (i == ' ' || !isalpha(i) || isdigit(i)) {
             contador = 0;
         } else {
