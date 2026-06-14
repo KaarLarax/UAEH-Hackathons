@@ -1,0 +1,8 @@
+.cph/
+.vscode/
+build/
+dist/
+*.o
+*.log
+*.tmp
+Certificado*.pdf
